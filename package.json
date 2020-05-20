@@ -1,0 +1,36 @@
+{
+  "name": "verticeaudio",
+  "version": "0.0.1",
+  "description": "Sistema de verticeaudio",
+  "author": "Nelson Gonzalez (neruson)",
+  "scripts": {
+    "start": "NODE_ENV=development nodemon ./src/server.js --exec babel-node",
+    "start-pm2": "pm2-runtime start pm2.json --env production",
+    "start-heroku": "pm2-runtime start pm2.json --env production",
+    "test-processpay": "NODE_ENV=development babel-node scripts/test-processpay.js",
+    "populate": "NODE_ENV=development babel-node scripts/populatedb.js",
+    "populate-mlab": "NODE_ENV=heroku babel-node scripts/populatedb-mlab.js"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "apollo-server-express": "^2.4.8",
+    "axios": "^0.18.1",
+    "bcrypt": "^3.0.1",
+    "crypto": "^1.0.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "helmet": "^3.14.0",
+    "dotenv": "^6.2.0",
+    "graphql": "^14.0.2",
+    "jsonwebtoken": "^8.4.0",
+    "moment": "^2.22.2",
+    "mongoose": "^5.3.11",
+    "pm2": "^4.2.3",
+    "subscriptions-transport-ws": "^0.9.15"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

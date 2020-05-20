@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name":"api",
+      "script": "src/server.js",
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "intences": "1",
+      "watch": false,
+      "ignore_watch": ["src/files"],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "exec_interpreter": "babel-node"
+    }
+  ]
+}
